@@ -1,0 +1,59 @@
+body {
+  background-color: black;
+  font-family: Arial;
+  font-size: 14px;
+  color: white;
+}
+
+.explore-tabs {
+  padding: 0;
+}
+.explore-tabs li {
+  list-style-type: none;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.explore-tabs li a {
+  text-decoration: none;
+  color: rgb(110, 118, 125);
+  font-size: 15px;
+  padding: 16px;
+}
+
+.explore-tabs .tabs-selected a {
+  color: rgb(29,161,242);
+  border-bottom: 2px solid rgb(29,161,242);
+}
+
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
+.row {
+  border-bottom: 1px solid rgb(56,68,77);
+  margin-bottom: 10px;
+}
+.row > div {
+  margin-left: 0px;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-size: 13px;
+  font-weight: normal;
+  color: rgb(110, 118, 125);
+  margin: 0px;
+}
+
+h1 {
+  margin: 2px;
+  font-size: 18px;
+}
