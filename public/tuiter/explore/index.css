@@ -5,43 +5,43 @@ body {
   color: white;
 }
 
-.explore-tabs {
+.wd-explore-tabs {
   padding: 0;
 }
-.explore-tabs li {
+.wd-explore-tabs li {
   list-style-type: none;
   display: inline-block;
   text-decoration: none;
 }
 
-.explore-tabs li a {
+.wd-explore-tabs li a {
   text-decoration: none;
   color: rgb(110, 118, 125);
   font-size: 15px;
   padding: 16px;
 }
 
-.explore-tabs .tabs-selected a {
+.wd-explore-tabs .wd-tabs-selected a {
   color: rgb(29,161,242);
   border-bottom: 2px solid rgb(29,161,242);
 }
 
-.float-left {
+.wd-float-left {
   float: left;
 }
-.float-right {
+.wd-float-right {
   float: right;
 }
 
-.clear {
+.wd-clear {
   clear: both;
 }
 
-.row {
+.wd-row {
   border-bottom: 1px solid rgb(56,68,77);
   margin-bottom: 10px;
 }
-.row > div {
+.wd-row > div {
   margin-left: 0px;
   margin-bottom: 15px;
 }
