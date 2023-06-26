@@ -21,3 +21,17 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# ignore node library files
+#node_modules
+
+# labs
+public/labs/*
+public/index.html
+
+# lectures
+public/lectures/*
+
+# vendor
+public/vendors/*
+
