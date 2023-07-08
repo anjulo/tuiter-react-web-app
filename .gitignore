@@ -27,7 +27,7 @@ yarn-error.log*
 
 # labs
 public/labs/*
-public/index.html
+# public/index.html
 
 # lectures
 public/lectures/*

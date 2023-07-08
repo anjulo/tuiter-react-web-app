@@ -6,8 +6,7 @@ const exploreItem = (item) => {
       <div class="col-10">
         <div class="text-secondary">${item.topic}</div>
         <div><strong>${item.userName}</strong><i class="fas fa-check-circle ms-1" style="color: blue;"></i> - ${item.time}</div>
-        <div><strong>${item.title}</strong>
-        </div>
+        <div><strong>${item.title}</strong></div>
         <div class="text-secondary"> ${item.tuits ? `${item.tuits} tuits` : ""}</div>
       </div>
       <div class="col-2">
