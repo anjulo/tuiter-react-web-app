@@ -12,7 +12,7 @@ function App() {
         <Routes>
           {/* <Route path='/hello' element={<HelloWorld />} /> */}
           <Route index element={<HelloWorld />} />
-          <Route path='/labs' element={<Labs />} />
+          <Route path='/labs/*' element={<Labs />} />
           <Route path='/tuiter/*' element={<Tuiter />}/>
         </Routes>
       </div>
