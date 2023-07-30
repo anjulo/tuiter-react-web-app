@@ -6,7 +6,7 @@ const WhoToFollowList = () => {
   return (
     <ul className="list-group">
       <li className="list-group-item">
-        <h3>Who to follow</h3>
+        <h3 className="fs-4">Who to follow</h3>
       </li>
       {
         usersArray.map(user =>

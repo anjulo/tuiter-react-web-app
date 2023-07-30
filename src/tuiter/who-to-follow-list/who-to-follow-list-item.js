@@ -4,7 +4,7 @@ const WhoToFollowListItem = ({user}) => {
     <li className="list-group-item">
       <div className="row">
         <div className="col-3">
-          <img src={`../../../public/images/${user.avatarIcon}`} className="img-thumbnail rounded-circle p-0" alt="thumbnail"/>
+          <img src={`../../images/${user.avatarIcon}`} className="img-thumbnail rounded-circle p-0" alt="thumbnail"/>
         </div>
         <div className="col-6">
           <div><strong>{user.userName}</strong><i className="fas fa-check-circle ms-1 " style={{color: "blue"}}></i></div>

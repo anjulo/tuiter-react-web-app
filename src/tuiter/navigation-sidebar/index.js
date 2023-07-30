@@ -9,7 +9,7 @@ const NavigationSidebar = () => {
   console.log(parts);
   return (
     <div className="list-group">
-      <Link to="/tuiter" className="list-group-item">Tuiter</Link>
+      <Link to="/tuiter" className="list-group-item"><i class="fab fa-twitter me-1 fa-2x"></i></Link>
       <Link to="/tuiter/home" className={`list-group-item ${parts.at(-1) === "" || parts.at(-1) === "home" ? 'active' : ''}`}>
         <div className="row">
           <div className="col-12 col-xl-2 col-xxl-2"><i className="fas fa-home me-1"></i> </div>

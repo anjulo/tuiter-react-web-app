@@ -20,7 +20,7 @@ const PostSummaryItem = (
        <div><strong>{post.title}</strong></div>
      </div>
      <div className="col-2">
-       <img src= {post.image} alt="okay" width="100%" className="float-end tounded-3"/>
+       <img src= {"../../images/"+ post.image} alt="okay" width="100%" className="float-end tounded-3"/>
      </div>
    </div>
   </li>
