@@ -1,8 +1,10 @@
 import React from "react";
-import postsArray from './posts.json';
+// import postsArray from './posts.json';
 import PostSummaryItem from "./post-summary-item";
+import { useSelector } from "react-redux";
 
 const PostSummaryList = () => {
+  const postsArray = useSelector(state => state.tuits);
   return (
     <ul className="list-group">
       <div className="position-relative mb-1">
@@ -12,7 +14,8 @@ const PostSummaryList = () => {
       {
         postsArray.map(post =>
           <PostSummaryItem
-            key={post._id} post={post} />)
+            key={post._id}
+            post={post} />)
       }
     </ul>
   );
