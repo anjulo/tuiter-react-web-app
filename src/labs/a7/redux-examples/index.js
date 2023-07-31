@@ -3,7 +3,7 @@ import hello from "./reducers/hello";  // import reducer that calculates/generat
 import todos from "./reducers/todos-reducer";
 import HelloReduxExampleComponent from "./hello-redux-example-component";  // // import the component that consumes the data
 import { Provider } from "react-redux";   // import Provider which will deliver the data 
-import { createStore } from "redux"       // import createStore to store data from reducers
+// import { createStore } from "redux"       // import createStore to store data from reducers
 import { configureStore } from "@reduxjs/toolkit";  // import the configureStore function
 import Todos from "./todos-component";             // import new component to render todos
 

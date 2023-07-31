@@ -1,0 +1,44 @@
+[
+  {
+    "_id": 234,
+    "topic": "Space",
+    "userName": "SpaceX",
+    "time": "2h",
+    "title": "100s of SpaceX Starships land on Mars after a 6 month journey. 1000s of Martian colonists being building Mars Base 1",
+    "image": "spaceX.jpg",
+    "liked": true,
+    "replies": 123,
+    "retuits": 432,
+    "likes": 2345,
+    "handle": "@spacex",
+    "tuit": "You want to wake up in the morning and think the future is going to be great - and that’s what being a spacefaring civilization is all about. It’s about believing in the future and thinking that the future will be better than the past. And I can’t think of anything more exciting than going out there and being among the stars"
+  },
+  {
+    "_id": 456,
+    "topic": "EV",
+    "userName": "Tesla",
+    "time": "4d",
+    "title": "Autopilot prevents serious injury or death of driver in Model S collision in Netherlands",
+    "image": "tesla.jpg",
+    "liked": true,
+    "replies": 234,
+    "retuits": 543,
+    "likes": 3456,
+    "handle": "@tesla",
+    "tuit": "A Tesla Model S involved in a collision with a tree in the Netherlands on Wednesday was saved from serious injury or death thanks to the vehicle’s Autopilot system, according to local police. The driver of the vehicle was reportedly unresponsive when emergency services arrived at the scene of the accident, but the Model S was still traveling at a speed of approximately 100 km/h (62 mph)."
+  },
+  {
+    "_id": 236,
+    "topic": "X",
+    "userName": "X",
+    "time": "2h",
+    "title": "Twitter formallly changes name to X",
+    "image": "spaceX.jpg",
+    "liked": false,
+    "replies": 123,
+    "retuits": 432,
+    "likes": 2345,
+    "handle": "@X",
+    "tuit": "Twitter inc. has officially changed its name to X. The company has been working on a new name for the past 2 years and has finally settled on X. The company has also changed its logo to a simple X. What a stupid move by its new CEO, Elon Musk."
+  }
+]

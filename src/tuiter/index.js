@@ -11,11 +11,13 @@ import { configureStore } from "@reduxjs/toolkit";      // import configureStore
 import { Provider } from "react-redux";                   // import the Provider component
 import userReducer from "./reducers/user-reducer";        // import the reducer
 import postsReducer from "./reducers/posts-reducer";
+import tuitsReducer from "./reducers/tuits-reducer";
 
 const store = configureStore({
   reducer: {
     users: userReducer,
     posts: postsReducer,
+    tuits: tuitsReducer
   }
 })
 
@@ -32,6 +34,7 @@ function Tuiter() {
           <div className="col-6 col-sm-11 col-md-10 col-lg-8 col-xl-7 col-xxl-7">
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/home" element={<Home />} />
               <Route path="/explore" element={<ExploreComponent />} />
               <Route path="/profile" element={<Profile />} />
             </Routes>
