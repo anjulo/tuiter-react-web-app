@@ -3,18 +3,19 @@ import NavigationSidebar from "./navigation-sidebar";
 import WhoToFollowList from "./who-to-follow-list";
 import ExploreComponent from "./explore";
 import { Routes, Route } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "bootswatch/dist/cyborg/bootstrap.min.css"; // Import the dark theme CSS
 import Home from "./home";
 import Profile from "./profile";
 import { configureStore } from "@reduxjs/toolkit";      // import configureStore
 import { Provider } from "react-redux";                   // import the Provider component
 import userReducer from "./reducers/user-reducer";        // import the reducer
-import tuitsReducer from "./reducers/tuits-reducer";
+import postsReducer from "./reducers/posts-reducer";
 
 const store = configureStore({
   reducer: {
     users: userReducer,
-    tuits: tuitsReducer
+    posts: postsReducer,
   }
 })
 
