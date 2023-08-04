@@ -10,6 +10,9 @@ export const findTuits = async () => {            // async tags this function as
   return tuits;                                  // return tuits            
  }
  
-export const deleteTuit = async (tuit) => {}
+export const deleteTuit = async (tid) => {
+  const response = await axios.delete(`${TUITS_API}/${tid}`);
+  return response.data;
+}
 export const updateTuit = async (tuit) => {}
 

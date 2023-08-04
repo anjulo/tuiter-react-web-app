@@ -1,7 +1,8 @@
 import React from "react";
 import TuitStats from "./TuitStats";
 import { useDispatch } from "react-redux";
-import { deleteTuit } from "../reducers/tuits-reducer";
+// import { deleteTuit } from "../reducers/tuits-reducer";
+import { deleteTuitThunk } from "../services/tuits-thunks";
 
 const TuitItem = ({ tuit }) => {
   const dispatch = useDispatch()
@@ -16,7 +17,8 @@ const TuitItem = ({ tuit }) => {
             {tuit.userName} <bi className="bi bi-check-circle-fill"></bi> {tuit.handle} · {tuit.time}
             <bi
               className="bi bi-x float-end"
-              onClick={() => {dispatch(deleteTuit(tuit._id))}}
+              // onClick={() => dispatch(deleteTuit(tuit._id))}
+              onClick = {() => dispatch(deleteTuitThunk(tuit._id))}
             >
             </bi>
           </div>
