@@ -1,6 +1,7 @@
 import React from "react";
 import { toggleLike } from "../reducers/tuits-reducer";
 import { useDispatch } from "react-redux";
+import { updateTuitThunk } from "../services/tuits-thunks";
 
 const TuitStats = ({ tuit }) => {
   console.log(tuit)
@@ -18,7 +19,8 @@ const TuitStats = ({ tuit }) => {
         <div className="col-3">
           <bi 
             className="bi bi-heart me-1"
-            onClick = {() => dispatch(toggleLike(tuit._id))}
+            // onClick = {() => dispatch(toggleLike(tuit._id))}
+            onClick = {() => dispatch(updateTuitThunk({...tuit, liked: true, likes : tuit.likes+1}))}
           ></bi> 
           {tuit.likes}
         </div>
@@ -28,7 +30,8 @@ const TuitStats = ({ tuit }) => {
         <div className="col-3">
           <bi 
             className="bi bi-heart-fill text-danger me-1"
-            onClick = {() => dispatch(toggleLike(tuit._id))}
+            // onClick = {() => dispatch(toggleLike(tuit._id))}
+            onClick = {() => dispatch(updateTuitThunk({...tuit, liked: false, likes : tuit.likes-1}))}
           ></bi> 
           {tuit.likes}
         </div>

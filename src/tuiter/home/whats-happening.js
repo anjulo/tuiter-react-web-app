@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { createTuit } from "../reducers/tuits-reducer";
+// import { createTuit } from "../reducers/tuits-reducer";
+import { createTuitThunk } from "../services/tuits-thunks";
 
 const WhatsHappening = () => {
   let [whatsHappening, setWhatsHappening] = useState('');
@@ -24,7 +25,8 @@ const WhatsHappening = () => {
             <i className="bi bi-geo-alt"></i>
             <button
               className="rounded-pill btn btn-primary float-end mt-2 ps-3 pe-3 fw-bold"
-              onClick={(tuit) => dispatch(createTuit(whatsHappening))}
+              // onClick={() => dispatch(createTuit(whatsHappening))}
+              onClick={() => dispatch(createTuitThunk({tuit: whatsHappening}))}
             >
               Tuit
             </button>

@@ -4,7 +4,7 @@ import * as service from "./tuits-service"            // import all exported fun
 
 const findTuitsThunk = createAsyncThunk(      // create thunk for findTuits
   'tuits/findTuits',                                 // give unique name,
-  async () =>  { return await service.findTuits()  } // thunk invokes service function.
+  async () =>  await service.findTuits()   // thunk invokes service function.
 )                                                    // Returned data goes in redux action's payload
 
 const deleteTuitThunk = createAsyncThunk(
@@ -15,5 +15,15 @@ const deleteTuitThunk = createAsyncThunk(
   }
 )
 
+const createTuitThunk = createAsyncThunk(
+  'tuits/createTuit',
+  async (tuit) => await service.createTuit(tuit)
+)
 
-export { findTuitsThunk, deleteTuitThunk } 
+const updateTuitThunk = createAsyncThunk(
+  'tuits/updateTuit',
+  async tuit => await service.updateTuit(tuit)
+)
+
+
+export { findTuitsThunk, deleteTuitThunk, createTuitThunk, updateTuitThunk } 
