@@ -11,6 +11,7 @@ const TuitItem = ({ tuit }) => {
       <div className="row">
         <div className="col-2">
           <img className="img-thumbnail rounded-circle img-fluid" src={"../images/" + tuit.image} alt="wtf" />
+          {console.log(tuit.image)}
         </div>
         <div className="col-10">
           <div className="mb-1">
