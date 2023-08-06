@@ -18,8 +18,8 @@ const TuitStats = ({ tuit }) => {
         <div className="col-3">
           <bi 
             className="bi bi-heart me-1"
-            // onClick = {() => dispatch(toggleLike(tuit._id))}
-            onClick = {() => dispatch(updateTuitThunk({...tuit, liked: true, likes : tuit.likes+1}))}
+            // onClick = {() => dispatch(updateTuitThunk({...tuit, liked: true, likes : tuit.likes+1}))}
+            onClick = {() => dispatch(updateTuitThunk({_id: tuit._id, updates: {liked: true, likes : tuit.likes+1}}))}
           ></bi> 
           {tuit.likes}
         </div>
@@ -30,7 +30,8 @@ const TuitStats = ({ tuit }) => {
           <bi 
             className="bi bi-heart-fill text-danger me-1"
             // onClick = {() => dispatch(toggleLike(tuit._id))}
-            onClick = {() => dispatch(updateTuitThunk({...tuit, liked: false, likes : tuit.likes-1}))}
+            // onClick = {() => dispatch(updateTuitThunk({...tuit, liked: false, likes : tuit.likes-1}))}
+            onClick = {() => dispatch(updateTuitThunk({_id: tuit._id, updates: {liked: false, likes : tuit.likes-1}}))}
           ></bi> 
           {tuit.likes}
         </div>

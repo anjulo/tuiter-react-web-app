@@ -79,8 +79,8 @@ const tuitsReducer = createSlice({
     [updateTuitThunk.fulfilled]:
       (state, action) => {
         state.loading = false
-        const tuitIdx = state.tuits.findIndex(tuit => tuit._id = action.payload._id)
-        state.tuits[tuitIdx] = {...state.tuits[tuitIdx], ...action.payload}
+        const tuitIdx = state.tuits.findIndex(tuit => tuit._id === action.payload._id)
+        state.tuits[tuitIdx] = {...state.tuits[tuitIdx], ...action.payload.updates}
       }
   }
 })

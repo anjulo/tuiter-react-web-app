@@ -22,7 +22,7 @@ const createTuitThunk = createAsyncThunk(
 
 const updateTuitThunk = createAsyncThunk(
   'tuits/updateTuit',
-  async tuit => await service.updateTuit(tuit)
+  async ({_id, updates}) => await service.updateTuit(_id, updates)
 )
 
 
