@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-// import { createTuit } from "../reducers/tuits-reducer";
 import { createTuitThunk } from "../services/tuits-thunks";
 
 const WhatsHappening = () => {

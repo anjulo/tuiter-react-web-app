@@ -1,5 +1,4 @@
 import React from "react";
-import { toggleLike } from "../reducers/tuits-reducer";
 import { useDispatch } from "react-redux";
 import { updateTuitThunk } from "../services/tuits-thunks";
 

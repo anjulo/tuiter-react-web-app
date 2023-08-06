@@ -1,7 +1,6 @@
 import React from "react";
 import TuitStats from "./TuitStats";
 import { useDispatch } from "react-redux";
-// import { deleteTuit } from "../reducers/tuits-reducer";
 import { deleteTuitThunk } from "../services/tuits-thunks";
 
 const TuitItem = ({ tuit }) => {
