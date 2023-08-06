@@ -13,7 +13,6 @@ const TuitsList = () => {
     }, [])                                             // with useSelector() and render the tuits here
   // const tuitsArray = useSelector(state => state.tuits)
   
-  // console.log(tuitsArray);
   return (
 
     <ul className="list-group">
