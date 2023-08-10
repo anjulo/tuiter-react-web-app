@@ -2,12 +2,24 @@ import React from "react"
 import '@fortawesome/fontawesome-free/css/all.css';
 import { useLocation } from "react-router";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const NavigationSidebar = () => {
   const { pathname } = useLocation();
   const parts = pathname.split('/');
-  const screens = ["home", "explore", "notifications", "messages", "bookmarks", "lists", "profile", "register", "login", "more"]
-  const icons = ["fa-home", "fa-hashtag", "fa-bell", "fa-envelope", "fa-bookmark", "fa-list", "fa-user", "fa-user-plus", "fa-right-to-bracket", "fa-ellipsis-h"]
+
+  let screens = []
+  let icons = []
+
+  const {currentUser} = useSelector(state => state.users)
+  if(currentUser){
+    screens = ["home", "explore", "notifications", "messages", "bookmarks", "lists", "profile", "register", "login", "more"]
+    icons = ["fa-home", "fa-hashtag", "fa-bell", "fa-envelope", "fa-bookmark", "fa-list", "fa-user", "fa-user-plus", "fa-right-to-bracket", "fa-ellipsis-h"]
+  }
+  else{
+    screens = ["explore","register", "login", "more"]
+    icons = ["fa-hashtag","fa-user-plus", "fa-right-to-bracket", "fa-ellipsis-h"]
+  }
 
   return (
     <div className="list-group">
@@ -20,7 +32,12 @@ const NavigationSidebar = () => {
           </div>
         </Link>
       )}
-
+      <Link to="/" className="list-group-item">
+        <div className="row">
+          <div className="col-12 col-xl-2 col-xxl-2"><i className="fas fa-flask"></i> </div>
+          <div className="d-none d-xl-block col-10">Labs</div>
+        </div>
+      </Link>
     </div>
   );
 }
