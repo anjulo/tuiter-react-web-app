@@ -1,13 +1,19 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { registerThunk } from "../services/users-thunk";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
+  const {currentUser, error} = useSelector(state => state.users);
+  const navigate = useNavigate();
+  if(currentUser) {
+    navigate("/tuiter/profile")
+  }
+
   const [username, setUsername] = useState()
   const [password, setPassword] = useState()
   const [confrimPassword, setConfrimPassword] = useState()
   const [registerError, setRegisterError] = useState(null)
-  const {currentUser, error} = useSelector(state => state.users)
   const dispatch = useDispatch()
   const handleRegisterBtn = () => {
     if (password !== confrimPassword) {
@@ -61,10 +67,6 @@ const Register = () => {
         onClick={handleRegisterBtn}>
         Register
       </button>
-      {
-        currentUser && 
-        <div className="alert alert-success"> Welcome {currentUser.username}</div>
-      }
     </div>
   )
 }

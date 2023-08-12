@@ -1,12 +1,18 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { logInThunk } from "../services/users-thunk";
+import { useNavigate } from "react-router-dom";
+
 
 const Login = () => {
+  const {currentUser} = useSelector(state => state.users);
+  const navigate = useNavigate();
+  if(currentUser) {
+    navigate("/tuiter/profile")
+  }
   const [username, setUsername] = useState()
   const [password, setPassword] = useState()
   const [logInError, setLogInError] = useState(null)
-  const {currentUser} = useSelector(state => state.users)
   const dispatch = useDispatch()
   const handleLogInBtn = async () => {
     const user = {username, password}
@@ -26,7 +32,7 @@ const Login = () => {
           className="form-control w-50"
           type="text"
           id="username"
-          placeholde="johndoe"
+          placeholder="johndoe"
           onChange={e => setUsername(e.target.value)}
         />
       </div> 
@@ -43,10 +49,6 @@ const Login = () => {
         onClick={handleLogInBtn}>
         Log In
       </button>
-      { 
-        currentUser && 
-        <div className="alert alert-success"> Welcome {currentUser.username}</div>
-      }
     </div>
   )
 }
