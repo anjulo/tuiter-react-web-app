@@ -1,6 +1,4 @@
 import axios from 'axios';  // import axios
-import dotenv from 'dotenv';
-dotenv.config();
 const REACT_APP_API_TUITS =  `${process.env.REACT_APP_API_BASE}` + "/tuits";  // location of HTTP services
 
 
