@@ -13,8 +13,8 @@ const NavigationSidebar = () => {
 
   const {currentUser} = useSelector(state => state.users)
   if(currentUser){
-    screens = ["home", "explore", "notifications", "messages", "bookmarks", "lists", "profile", "register", "login", "more"]
-    icons = ["fa-home", "fa-hashtag", "fa-bell", "fa-envelope", "fa-bookmark", "fa-list", "fa-user", "fa-user-plus", "fa-right-to-bracket", "fa-ellipsis-h"]
+    screens = ["home", "explore", "notifications", "messages", "bookmarks", "lists", "profile", "more"]
+    icons = ["fa-home", "fa-hashtag", "fa-bell", "fa-envelope", "fa-bookmark", "fa-list", "fa-user", "fa-ellipsis-h"]
   }
   else{
     screens = ["explore","register", "login", "more"]
