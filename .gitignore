@@ -35,3 +35,7 @@ public/lectures/*
 # vendor
 public/vendors/*
 
+
+# environment variables
+.env
+
