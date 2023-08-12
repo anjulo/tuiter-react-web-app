@@ -4,7 +4,7 @@ import { registerThunk } from "../services/users-thunk";
 import { useNavigate } from "react-router-dom";
 
 const Register = () => {
-  const {currentUser, error} = useSelector(state => state.users);
+  const {currentUser} = useSelector(state => state.users);
   const navigate = useNavigate();
   if(currentUser) {
     navigate("/tuiter/profile")
